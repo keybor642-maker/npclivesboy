@@ -1,0 +1,25 @@
+name: LivesPlugin
+version: 1.0.0
+main: mc.mkay.lives.LivesPlugin
+api-version: '1.21'
+description: Lives system for Bloom SMP
+author: mkaymc
+softdepend: [PlaceholderAPI]
+
+commands:
+  lives:
+    description: Check your remaining lives
+    usage: /lives
+  setlives:
+    description: Set a player's lives
+    usage: /setlives <player> <amount>
+    permission: lives.admin
+  resetlives:
+    description: Reset a player's lives
+    usage: /resetlives <player|all>
+    permission: lives.admin
+
+permissions:
+  lives.admin:
+    description: Admin lives commands
+    default: op
